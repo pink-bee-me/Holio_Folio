@@ -37,10 +37,11 @@ html {
   .Navbar a {
       float: left; /* This specifies that the text floats on the left on the navbar */
       display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-      color: white; /* This is the font color for text on our navbar */
+      color:fuschia; /* This is the font color for text on our navbar */
+      background-color:black;
       padding: .75vw 1vw; /* This adds padding around our text */
       text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-      font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+      font-family: "Optima", Helvetica; /* This specifies the font family for text on our navbar */
       font-size: 1.5vw; /* This specifies the font size for text on our navbar */
       text-align: center; /* This centers the text within its container */
       position: relative;
@@ -70,8 +71,8 @@ html {
   
   /* Navbar hover effect */
   .Navbar a:hover {
-    background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
-    color: black; /* This defines the font color that will display when you hover over the text on the navbar */ 
+    background-color: coral; /*  This defines the background color that will display when you hover over the text on the navbar */
+    color:slateblue; /*text on the navbar */ 
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
     cursor: pointer;
     -webkit-transition-duration: 1s; 
@@ -80,13 +81,13 @@ html {
   
   /* Navbar home button */
   .Navbar a.active { /* The active selector styles a link */
-    background-color: darkgray;  /* This specifies the background color behind the Home button on the navbar */ 
+    background-color: coral;  /* This specifies the background color behind the Home button on the navbar */ 
   }
   
   /* This causes the video to zoom out from a zoomed in position upon page load */
   @keyframes zoominoutsinglefeatured {
       0% {
-          transform: scale(1.5,1.5);
+          transform: scale(3,1.5);
       }
       100% {
           transform: scale(1,1);
@@ -94,67 +95,105 @@ html {
   }
 
   #Home {
-    width: 100%;
-    height:100%;
+    position:relative;
+    width: 100vw;
+    height:115vh;
     overflow:hidden;
   }
   
   /* Video */
   #Golden_Moon {
       position: fixed; /* This fixes our video to the page  */
-     
-      right:-33vw;/* This ensures no space between the edge of the video and the edge of the page */
+      top:-18vh;/* This ensures no space between the edge of the video and the edge of the page */
        /* This ensures no space between the edge of the video and the edge of the page */
-      min-height: 100%; /* This ensures the video is displayed across the full height of the page */
-      top: -30vh;
-      z-index: -1;
-      animation: zoominoutsinglefeatured 5s;
-  }
+      left:-15vw;
+       min-height: 100vh; /* This ensures the video is displayed across the full height of the page */
+      z-index:-1;
+    }
   
   /* Text over the video */ 
-  .Video_Text { 
-      background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
-      color: white; 
-      width: 100%;
-      padding-top: .1vh; /* This adds padding around the text so that the background goes slightly beyond the text */
-      padding-bottom: 1vh;
-      margin-top: 5%;
-      position: relative;
-      -webkit-animation: moveNav 4s; /* Safari 4.0 - 8.0 */
-      animation: movevideoText 4s;
+  .video-text1{ 
+    position:relative;
+    bottom:25h;
+    background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
+    color: white; 
+    width: 100%;
+    height:100vh;
+    padding-top: .1vh; /* This adds padding around the text so that the background goes slightly beyond the text */
+    -webkit-animation: moveNav 4s; /* Safari 4.0 - 8.0 */
+    animation: movevideoText 4s;
   }
 
   #Intro_Head {
+    position:relative;
+    top:2vh;
     text-align:center;
+    cursor:pointer;
+    transform: tranlateY(25px) translateZ(100px) perspective(400px);
+    transition:transform 3s; 
+    transition-delay:2s;
   }
 
-  #Intro_Head > h2#Introducing, h2#ByWho {
-    color: rgb(247, 220, 196);
-      text-shadow:1.5px 1.5px 1.5px rgb(235, 160, 232) ;
-    font-family:"Brush Script MT";
+  #Intro_Head  h3#Introducing {
+    position:relative;
+    top:4vh;
+    color: rgb(252, 195, 195);
+    font-family:"Yellowtail", cursive;
+    margin-bottom:0;
+    transform: tranlateY(25px) translateZ(100px) perspective(400px);
+    transition:transform 3s;
+    transition-delay:2s;
   }
+  
+  #Intro_Head h3#ByWho {
+    position:relative;
+    top:-10vh;
+    color: rgb(252, 195, 195);
+    font-family:"Yellowtail", cursive;
+    
+  }
+
 
   #Intro_Head > h1#Intro_Title {
+    position:relative;
+    top:-2vh;
     font-family:"Optima";
-    font-size:2.5em;
-    color:steelblue;
-    text-shadow:2.25px 2.25px 2.25px peachpuff;
+    font-size:4em;
+    color:rgb(97, 124, 179);
+    text-shadow:3px 3px 3px rgb(220, 96, 231);
+    transform: tranlateY(25px) translateZ(100px) perspective(400px);
+    transition:transform 3s; 
+    transition-delay:2s;
   }
 
   #Intro_Head > h1#Intro_Title span {
     font-variant:all-small-caps;
   }
 
- #Intro_Poem {
-   margin-top:5%;
-    color:rgb(235, 160, 232);
-    text-shadow:1.25px 1.25px 1.25px rgb(247, 220, 196);
+  #Intro_Head:hover {
+    transform: scale 5em;
+    transition: transform 3s;
   }
 
-  #Hello {
-    color:steelblue;
-    text-shadow:1px 1px 1px peachpuff;
+ #Intro_Poem > p { 
+   position:relative;
+    top:-4vh;
+    text-align:center;
+   margin-top:2%;
+    color:rgb(247, 220, 196);
+    text-shadow:1.25px 1.25px 1.25px rgb(215, 37, 231);
   }
+
+  #Hello p {
+    position:relative;
+    top:-3vh;
+    color:rgb(103, 140, 214);
+    text-shadow:1px 1px 1px peachpuff;
+   text-align:center;
+   font-size:1.25em;
+  }
+
+  
 
   #Hello span {
     color:peachpuff;
@@ -164,6 +203,8 @@ html {
   
   /* Slideshow Styling */
   #Slideshow_Background {
+    padding-bottom:10vh;
+    padding-top:10vh;
     background:rgba(255,255,255, 0.35); /* This creates a slightly transparent white background that's placed over the video */
     }
   
@@ -184,6 +225,8 @@ html {
   
   /* Slideshow section / container */
   #Slideshow_Container {
+    position:relative;
+    padding-bottom:3vh;
     width: 39.5vw;
     height: auto;
     padding-top: 4%;
@@ -293,17 +336,19 @@ html {
       float: left;  
       width: 50%; /* This ensures one column takes up half the page width */
       padding: 1.6%; 
-      background-color: rgb(247, 225, 209); 
-      height: 100vh; /* You may need to adjust this to fit your content */
+      background-color:#4d4d4d; 
+      height: 175vh; /* You may need to adjust this to fit your content */
   }
   
   .Column_2 {
       float: left;
       width: 50%;
       padding: 1.6%;
-      height: 100vh; /* You may need to adjust this to fit your content */
-      background-color: #4d4d4d;
+      height: 175vh; /* You may need to adjust this to fit your content */
+      background-color:rgb(247, 225, 209);
   }
+
+ 
   
   .Row:after { /* This inserts something after the content of selected elements */
       content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
@@ -311,10 +356,51 @@ html {
       clear: both; /* This clears any other elements from floating on the left or the right of an element */
   }
 
-  h3#AboutMe {
-    font-size:1.75em;
-    margin-top:2vh;
+#About {
+  color:#4d4d4d;
+} 
+
+h2#Me {
+  text-align:center;
+}
+
+#AboutMe h3 {
+    font-size:1.25em;
+    margin-top:1vh;
+    margin-bottom:0;
+    text-align:center;
+    color:black;
   }
+
+ h4#AboutMe {
+   font-weight:900;
+   color:black;
+ }
+ 
+   
+ p#AboutMe {
+  font-size:.85em;
+  margin-top:.25%;
+  margin-bottom:.5%;
+  font-weight:400;
+}
+
+h3#AboutMe {
+  color:black;
+}
+
+
+
+
+#AboutMe h3#LetsTalk {
+   margin-top:0;
+   margin-bottom:.25%;
+   color:black
+}
+
+#AboutMe h4#ClickMe {
+  margin-top:o;
+}
 
   
   /* Heading 1 elements */
@@ -337,9 +423,9 @@ html {
       font-family: Perpetua, Rockwell Extra Bold;
       text-align: justify;
       letter-spacing: .1vw; /* This expands the text slightly */
-      font-size: 1.5vw;
-      padding-left: 1vw;
-      padding-right: 1vw;
+      font-size: 1.25vw;
+      padding-left: 1.5vw;
+      padding-right: 1.5vw;
   }
   
   /* Center align elements - this embraces all centered text */
@@ -354,7 +440,7 @@ html {
   
   /* Anchor elements */
   a {
-      color:orchid;
+      color:fuchsia;
       text-shadow:1px 1px 1px white;
       font-size:1.75em; /* We are ensuring all links are blue */
   }
@@ -383,22 +469,73 @@ html {
   background-color:steelblue;
 }*/
 
+ #AboutFaucetHead {
+   position:relative;
+   width:100%;
+   height:50%;
+   border:10px dotted rgb(247, 225, 209);
+ }
  img#FaucetHead {
-  margin-top:25%;  
+   position:relative;
+  margin-top:7%;  
   padding:2%;
-    width:50%;
+    width:75%;
     height:50%;
-    background-color:rgb(226, 146, 224);
-    border:5px dotted peachpuff;
+    background-color:rgb(220, 96, 231);
+    border:10px dotted peachpuff;
   }
   
   #albert_Einstein {
     color:white;
+    font-size:1.25em;
     text-align:center;
-    Margin-top:7vh;
+    Margin-top:6vh;
   }
 
- p#GitHubLink {
+  .video-container2 {
+    position:relative;
+    width:100%;
+    height:35%;
+  }
+
+  #Idea {
+    position:relative;
+    width:100%;
+    top:5vh;
+    border:10px dotted rgb(247, 225, 209);
+  }
+
+  h2#LetsTalk{
+    position:relative;
+    top:-55vh;
+    text-align:center;
+    color:rgb(235, 57, 235);
+    font-size:5em;
+  }
+  h4#ClickMe {
+    position:relative;
+    top:-65vh;
+    text-align:center;
+    font-size:1.5em;
+    color:white;
+  }
+
+
+#Social_1{
+  position:relative;
+  top:15vh;
+}
+
+#Social_2{
+position:relative;
+top:50vh;
+}
+
+#Social_1 h2, #Social_2 h2 {
+  text-align:center;
+}
+
+p#GitHubLink {
     text-align:center;
    
   }
@@ -406,7 +543,7 @@ html {
   p#GitHubLink a{
  text-align:center;
  font-size:1.5em;
- color:orchid;
+ color:rgb(220, 96, 231);
     text-shadow:1.5px 1.5px 1.5px #4d4d4d;;
   }
 
@@ -417,7 +554,7 @@ html {
   p#LinkedInLink a {
     text-align:center;
     font-size:1.5em;
-    color:orchid;
+    color:rgb(220, 96, 231);
     text-shadow:1.5px 1.5px 1.5px #4d4d4d; 
   }
   .video-container {
@@ -425,40 +562,76 @@ html {
     width:100%;
     height:100%;
   }
+
+  .video-container3 {
+    position:relative;
+    width:100%;
+    height:40%;
+    margin:0 auto;
+    padding:3%;
+    top:15vh;
+  }
+
  video#SparklerClip {
   position:relative;
   bottom:1.5vh;
   width:100%;
   height:100%;
+  z-index:0;
+  border: 15pt solid rgb(247, 224, 205);
  }
 
- .video-text {
+ .video-text3 {
    position:relative;
    width:100%;
    height:100%;
-   bottom:75vh;
  }
 
  p#Coco {
    position:relative;
-   bottom:12vh;
-   font-size:1em;
-  margin-bottom:50%;
-  padding-bottom:5vh;
+   bottom:15vh;
    color:rgb(247, 224, 205);
    text-shadow:1.px 1.px 1.px white;
    text-align:center;
+   font-size:1.15em;
+ }
+
+ .video-container4{
+  position:relative;
+  width:100%;
+  height:40%;
+  margin:0 auto;
+  padding:3%;
+  top:-143vh;
+}
+
+#SparklerLeftClip {
+  position:relative;
+  bottom:1.5vh;
+  width:100%;
+  height:auto;
+  z-index:0;
+  border: 15pt solid rgb(247, 224, 205);
+}
+ .video-text4 {
+  position:relative;
+  width:100%;
+  height:100%;
+  top:-197vh;
  }
 
  p#LetItShine {
    position:relative;
-   bottom:12vh;
-   font-size:1em;
+   bottom:49vh;
+   right:-7vw;
+   font-size:1.15em;
    text-align:center;
    margin-top:70%;
    color:rgb(247, 224, 205);
    text-shadow:1.px 1.px 1.px white;
- }
+}
+
+
 
   /* Center align element hover effect */
   center:hover {
@@ -468,7 +641,8 @@ html {
   
   /* Paragraph element hover effect */
   p:hover {
-      color: #00004d;	
+      color:cornflowerblue;
+      font-weight:900;	
       transition: transform 1s;
       transform: scale(1.01);
   }
@@ -482,13 +656,16 @@ html {
   
   /* Image element hover effects */
   img:hover {
-      filter: grayscale(30%);  /* Brings back most of the image's color when hovered over */
+      filter: grayscale(20%);  /* Brings back most of the image's color when hovered over */
       transition: transform 1s;
       transform: scale(1.1);
   }
 
-  q#OscarWilde {
-    color:steelblue;
+  p#OscarWilde {
+    text-align:center;
+    font-size:1.5em;
+    color:rgb(245, 188, 202);
+    text-shadow:1.15px 1.15px 1.15px white;
   }
 
   img#PinkBee {
@@ -597,8 +774,71 @@ html {
   btn#DoneBtn {
     color:steelblue;
   }
-  /* Footer element */
-  footer {
-      padding: 2%;
-      background-color:white;
+
+  
+
+  #Goodbye {
+    position:relative;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:110vh;
+    
   }
+#Goodbye h3#ThankYou {
+    position:relative;
+    top:53vh;
+    left:57vw;
+    left:46.5vw;color:peachpuff;
+    text-shadow:1.10px 1.10px 1.10px white;
+}
+
+ #Goodbye h3#Until {
+    position:relative;
+    top:49vh;
+    left:53vw;
+    color:peachpuff;
+    text-shadow:1.10px 1.10px 1.10px white;
+    
+  }
+
+  #Goodbye h2#GreatDay {
+    position:relative;
+    top:37vh;
+    left:45vw;
+    font-size:1.77em;
+    color:orchid;
+    text-shadow:2px 2px 2px peachpuff;
+  }
+
+  #From {
+    position:relative;
+    top:35vh;
+    left:51vw;
+    color:peachpuff;
+    font-family:"Snell Roundhand","Brush Script MT","Brush Script Std", cursive;
+    text-shadow:1.25px 1.25px 1.25px peachpuff;
+  }
+
+  #GoodbyeCTC  {
+    position:relative;
+    top:30vh;
+    left:0vw;
+    text-align:center;
+    color:steelblue;
+    font-family:"Optima";
+    font-size:6em;
+    text-shadow:2px 2px 2px orchid;
+}
+  
+#GoodbyeCTC span {
+  font-variant:all-petite-caps;
+}
+
+ /* Footer element */
+ footer {
+  padding: 2%;
+  background-color:rgba(199, 195, 191, 0.137);
+color:rgb(135, 156, 197);
+
+}

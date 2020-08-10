@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>LaurieSue Peterson</title>
+	<link rel="stylesheet" type="text/css" href="PortfolioStyles_Part2.css">
+	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+	<script src="PortfolioJavaScript_Part2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<!-- We use a little bit of jQuery on this site now -->
+</head>
+
+<!-- Body -->
+
+<body class="Background">
+	<!-- Fade in effect -->
+	<!-- This script and function controls our fade in effect -->
+	<script>
+		document.body.className += 'fade-out';
+		$(function () {
+			$('body').removeClass('fade-out');
+		});
+	</script>
+
+	<!-- Navbar -->
+	<div class="Navbar">
+		<a class="active" href="#Home">Home</a>
+		<a href="#Slideshow">Slideshow</a> <!-- This is a new section -->
+		<a href="#About">About</a>
+		<a href="#GitHub">GitHub</a>
+		<a href="#LinkedIn">LinkedIn</a>
+		<a onclick="openForm()">Contact</a>
+		<!-- This makes it so that our openForm function runs when we click Contact on the nav bar -->
+	</div>
+
+	<!-- This allows us to close the form when we click outside the nav bar or contact form -->
+	<div class="btn cancel" onclick="closeForm()">
+
+		<!-- Home -->
+		<div id="Home">
+			<br> <!-- Breaks inserted to add space between navbar and first heading -->
+			<br>
+
+			<!-- Video -->
+			
+        </div>
+        
+        <!--Crawl-Starwars Type-->
+       
+            <video autoplay muted loop id="Golden_Moon" class="stretch">
+				<!-- Makes the video play automatically, on a loop and with no sound -->
+				<source src="./Images/Golden_Moon_Mine.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+				<!-- Display message if video fails to run -->
+            </video>
+            <div id="crawl-container" class="stretch">
+            <div id="crawl"> <!-- our plane in 3d -->
+              <div id="crawl-content">
+                <p>
+					<strong>
+						<center>
+							<q><span>Here's to the crazy ones,<br> the misfits, the rebels, the
+									troublemakers,
+									the round pegs in the square holes..</span>.<br> the ones who see things differently
+								--<br>
+								they're
+								not
+								fond of rules... You can quote them, disagree with them, glorify or vilify them,<br>
+								but
+								the
+								only thing you can't do is ignore them because they change things...<br> they push
+								the
+								human
+								race forward,<br> and while some may see them as the crazy ones, we see genius,<br>
+								because
+								the
+								ones who are crazy enough to think that they can change the world, are the ones who
+								do.
+							</q>
+							<br>-Steve Jobs<br>
+							<br>
+							<div id="Hello">
+								My name is<span> LaurieSue Peterson</span>. Welcome to my portfolio website. <br>
+								On it, I will tell you about my background and experience.<br>
+								<br>Thank you for stopping by and enjoy!
+							</div>
+						</center>
+					</strong>
+				</p>
+                ...
+              </div>
+            </div>
+          </div>
+
+
+
+		<!-- Video text -->
+		<div class="Video_Text">
+			<div id="Intro_Head">
+				<h3 id="Introducing">Introducing...</h3>
+				<h1 id="Intro_Title">C<span>reating</span>T<span>he</span>C<span>ode.com</span></h1>
+				<h3 id="ByWho">a portfolio by LaurieSue</h3>
+			</div>
+			<div id="Intro_Poem">
+				
+			</div>
+		</div>
+		<!-- Slideshow section -->
+		<div id="Slideshow">
+			<div id="Slideshow_Background">
+				<div id="Slideshow_Container">
+
+					<div class="mySlides fade">
+						<div class="Slide_Number">1 / 5</div>
+						<img class="Slide_Show_Images" src="./Images/Picture_of_You.jpg" style="width:75%; height:75% ">
+						<div class="text">I'm available to assist you on your project!</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="Slide_Number">2 / 5</div>
+						<img class="Slide_Show_Images" src="./Images/HTML_CSS_and_JavaScript.jpeg" style="width:75%">
+						<div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS,
+							JavaScript,</div>
+					</div>
+
+
+
+					<div class="mySlides fade">
+						<div class="Slide_Number">3 / 5</div>
+						<img class="Slide_Show_Images" src="./Images/C_Sharp_and_Dot_NET.png" style="width:75% ">
+						<div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="Slide_Number">4 / 5</div>
+						<img class="Slide_Show_Images" src="./Images/SQL_and_Database.jpg" style="width:75%">
+						<div class="text">back end development, databases and SQL.</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="Slide_Number">5 / 5</div>
+						<img class="Slide_Show_Images" src="./Images/Coding_1.jpg" style="width:75%">
+						<div class="text">
+							<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+						</div>
+					</div>
+
+					<a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+				<br>
+
+				<div style="text-align:center">
+
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(6)"></span>
+
+				</div>
+			</div>
+		</div>
+
+
+		<!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {
+					slideIndex = 1
+				}
+				if (n < 1) {
+					slideIndex = slides.length
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+			}
+		</script>
+
+		<!-- About section -->
+		<div class="Row" id="About">
+			<div class="Column_2">
+				<!-- Left column -->
+			<div id="AboutFaucetAlbert">
+				<img id="FaucetHead" src="/Images/LightbulbFaucetHead.png" alt="LightBulbFaucetHeat">
+				<p id="albert_Einstein"><q>Logic will get you from A to B.<br>
+						Imagination will take you everywhere.</q>
+					- Albert Einstein</p>
+<!-- Video -->
+<video autoplay muted loop id="Idea">
+	<!-- Makes the video play automatically, on a loop and with no sound -->
+	<source src="./Video/Idea - 122.mp4" type="video/mp4">
+	Your browser does not support HTML5 video.
+	<!-- Display message if video fails to run -->
+</video>
+
+			</div>
+		</div>
+			<div class="Column_1">
+				<!-- Right column -->
+				<div id="AboutMe">
+				<h3>About Me:</h3>
+				<h4>Philosophy & Mission:</h4>	
+				<h4>&nbsp The gist...</h4>
+				<p>Critical thinking is a skill, an art
+				form, and the foundation of great code.
+				Code can resemble a polished diamond, a rare and brilliant masterpiece, the simplest of doodles, or
+				anything in between.That's the beauty of it!<br><br> Code is a
+				creation brought to life by the artist...the computer programmer. <br><br>The discovery, the journey,
+				the
+				trials and tribulations, obstacles overcome,
+				and the never-ending hunt for buried treasure keep
+				things exciting... <br><br>
+				I have always enjoyed fixing things that are broken, finding solutions to problems, helping others, and
+				making people smile. My goal is to continue to accomplish these things through my work, and ultimately, through the code I create.<br><br>
+				<strong> My name is LaurieSue Peterson.</strong><br><br>
+			
+			<h4>Qualifications & Experience:</h4>
+				<p>As a graduate of <span><a id="Tech" href="https://www.learncodinganywhere.com/" target="_blank">The
+                    Tech
+                    Academy</a></span>’s Software Developer Boot Camp, I am trained and experienced in the following
+                web and
+                programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack
+                developer and I would love to work with you on a project.
+                <br><br>
+				<h4>Let's Talk!</h4>
+				Click the <a id="ContactMe" href="#Contact">Contact</a>button on the lower right corner of this page...<br> It's as easy as that! I look forward to meeting you.</p>
+		
+		</p>	</div>
+			</div>
+		</div>
+
+		<!-- GitHub section -->
+		<div class="Row" id="GitHub">
+			<div class="Column_1">
+				<div>
+					<center>
+						<strong>	
+						<h2>Visit My GitHub Profile...</h2>
+							<p><a id="GitHubPic" href="https://github.com/pink-bee-me" 			target="_blank"><img  src="/Images/media/	Images_for_Portfolio/	GitHub.png" width="40%" alt="GitHub Logo"></a></p>
+
+						<p id="GitHubLink" >	<a href="https://github.com/pink-bee-me"target="_blank">github.com/pink-bee-me</a><p>
+						</strong>
+						</center>
+				</div>
+				<br>
+				<br>
+				<div>
+				<center>
+					<strong>
+
+				<!-- Video -->
+			<div class="video-container">	
+			<video autoplay muted loop id="SwingingLightbulbs">
+				<!-- Makes the video play automatically, on a loop and with no sound -->
+				<source src="./Video/Light Bulbs - 113.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+				<!-- Display message if video fails to run -->
+			</video>
+			</div>
+				<h2 id="LinkedIn">Find Me on LinkedIn...</h2>
+					<p id="LinkedInPic" ><a href="www.linkedin.com/in/lauriesue" target="blank"><img  src="/Images/LI-Logo.png" width="70%" alt="LinkedInLink"></a></p>
+
+					<p id="LinkedInLink"><a href="www.linkedin.com/in/lauriesue" target="blank">linkedin.com/in/lauriesue</a>
+					</p>
+					<strong>
+				</center>
+			</div>
+		</div>
+			<div class="Column_2">
+				<!-- Right column -->
+				<div class="video-container">
+				<video autoplay loop  id="SparklerClip">
+					<source src="/Video/Sparkler - 7817.mp4"  type="video/mp4">Sparkler Video Clip</video> 
+				</div>
+			<div class="video-text">
+				<center>
+				<p id="Coco"><q>In order to be irreplaceable, one must always be different</q> <br>– Coco Chanel.</p>
+				<p id="LetItShine"><q>This little light of mine -<br>
+					I'm gonna let it shine, let it shine, let it shine...</q> <br>-My Sunday School Teacher</p>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+	<!-- Contact section -->
+	<div id="Contact">
+		<button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+		<div class="form-popup" id="myForm">
+			<form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+				<!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+				<h1>Contact</h1>
+				<label for="name"><b>Name</b></label>
+				<input type="text" placeholder="Type your name here" name="name" required>
+				<label for="phone"><b>Phone</b></label>
+				<input type="text" placeholder="Enter your phone number here" name="phone">
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="Type your email address here" name="email" required>
+				<label for="message"><b>Message</b></label>
+				<input type="text" placeholder="Type your message here" name="message">
+
+				<button type="submit" class="btn">SUBMIT</button>
+				<button id="DoneBtn" type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Footer section -->
+	<footer>
+		<p>
+			<center>
+				<q id="OscarWilde">Be yourself; everyone else is already taken.</q><br>
+				-Oscar Wilde</p>
+				<img id="PinkBee"src="/Images/pinkbeemee.jpg" width="10%"alt="LaurieSueBee"><br>
+				CreatingTheCode.com
+			</center><br>
+		</p>
+	</footer>
+	<div class="Row" id="Goodbye">
+
+		<h3 id="ThankYou">Thank You for taking the time to check-out my porfolio website.</h3><br>
+	<h3 id="Until">until we meet again...</h3><br><br>
+		<h2 id="GreatDay">GOODBYE <span style="color:peachpuff; text-shadow:none;">and</span> Have A Great Day !!!</h2><br>
+			<h3 id="From">Sincerely,</h3>
+			<h1 id="GoodbyeCTC">C<span>reating</span>T<span>he</span>C<span>ode</span>.<span>com</span></h1>
+
+
+
+	</div>
+
+</body>
+<script>
+	'undefined' === typeof _trfq || (window._trfq = []);
+	'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({
+		'tccl.baseHost': 'secureserver.net'
+	}), _trfd.push({
+		'ap': 'cpsh'
+	}, {
+		'server': 'a2plcpnl0622'
+	}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
+</script>
+<script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+
+</html>

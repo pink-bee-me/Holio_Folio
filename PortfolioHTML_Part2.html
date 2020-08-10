@@ -7,6 +7,7 @@
 	<meta charset="UTF-8">
 	<title>LaurieSue Peterson</title>
 	<link rel="stylesheet" type="text/css" href="PortfolioStyles_Part2.css">
+	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 	<script src="PortfolioJavaScript_Part2.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<!-- We use a little bit of jQuery on this site now -->
@@ -30,6 +31,7 @@
 		<a href="#Slideshow">Slideshow</a> <!-- This is a new section -->
 		<a href="#About">About</a>
 		<a href="#GitHub">GitHub</a>
+		<a href="#LinkedIn">LinkedIn</a>
 		<a onclick="openForm()">Contact</a>
 		<!-- This makes it so that our openForm function runs when we click Contact on the nav bar -->
 	</div>
@@ -49,47 +51,49 @@
 				Your browser does not support HTML5 video.
 				<!-- Display message if video fails to run -->
 			</video>
-		</div>
 
-		<!-- Video text -->
-		<div class="Video_Text">
-			<div id="Intro_Head">
-				<h2 id="Introducing">Introducing</h2>
-				<h1 id="Intro_Title">C<span>reating</span>T<span>he</span>C<span>ode.com</span></h1>
-				<h2 id="ByWho">a portfolio by LaurieSue</h2>
-			</div>
-			<div id="Intro_Poem">
-				<p>
-					<strong>
-						<center>
-							<q><span>Here's to the crazy ones,<br> the misfits, the rebels, the
-									troublemakers,
-									the round pegs in the square holes..</span>.<br> the ones who see things differently
-								--<br>
-								they're
-								not
-								fond of rules... You can quote them, disagree with them, glorify or vilify them,<br>
-								but
-								the
-								only thing you can't do is ignore them because they change things...<br> they push
-								the
-								human
-								race forward,<br> and while some may see them as the crazy ones, we see genius,<br>
-								because
-								the
-								ones who are crazy enough to think that they can change the world, are the ones who
-								do.
-							</q>
-							<br>-Steve Jobs<br>
-							<br>
-							<div id="Hello">
-								My name is<span> LaurieSue Peterson</span>. Welcome to my portfolio website. <br>
-								On it, I will tell you about my background and experience.<br>
-								<br>Thank you for stopping by and enjoy!
-							</div>
-						</center>
+
+			<!-- Video text -->
+			<div class="video-text1">
+				<div id="Intro_Head">
+					<h3 id="Introducing">Introducing...</h3>
+					<h1 id="Intro_Title">C<span>reating</span>T<span>he</span>C<span>ode.com</span></h1>
+					<h3 id="ByWho">a portfolio by LaurieSue</h3>
+				</div>
+				<div id="Intro_Poem">
+					<p>
+						<strong>
+							<center>
+								<q><span>Here's to the crazy ones,<br> the misfits, the rebels, the
+										troublemakers,
+										the round pegs in the square holes..</span>.<br> the ones who see things
+									differently
+									--<br>
+									they're
+									not
+									fond of rules... You can quote them, disagree with them, glorify or vilify them,<br>
+									but
+									the
+									only thing you can't do is ignore them because they change things...<br> they push
+									the
+									human
+									race forward,<br> and while some may see them as the crazy ones, we see genius,<br>
+									because
+									the
+									ones who are crazy enough to think that they can change the world, are the ones who
+									do.
+								</q>
+
+								<br>-Steve Jobs<br>
+								<br>
+					</p>
+					</center>
 					</strong>
-				</p>
+					<div id="Hello">
+						<p>Hello and Welcome to My Portfolio Website.<br>Enjoy!</p>
+					</div>
+
+				</div>
 			</div>
 		</div>
 		<!-- Slideshow section -->
@@ -99,13 +103,13 @@
 
 					<div class="mySlides fade">
 						<div class="Slide_Number">1 / 5</div>
-						<img class="Slide_Show_Images" src="/Images/Picture_of_You.jpg" style="width:75%; height:75% ">
+						<img class="Slide_Show_Images" src="./Images/Picture_of_You.jpg" style="width:75%; height:75% ">
 						<div class="text">I'm available to assist you on your project!</div>
 					</div>
 
 					<div class="mySlides fade">
 						<div class="Slide_Number">2 / 5</div>
-						<img class="Slide_Show_Images" src="/Images/HTML_CSS_and_JavaScript.jpeg" style="width:75%">
+						<img class="Slide_Show_Images" src="./Images/HTML_CSS_and_JavaScript.jpeg" style="width:75%">
 						<div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS,
 							JavaScript,</div>
 					</div>
@@ -114,19 +118,19 @@
 
 					<div class="mySlides fade">
 						<div class="Slide_Number">3 / 5</div>
-						<img class="Slide_Show_Images" src="/Images/C_Sharp_and_Dot_NET.png" style="width:75% ">
+						<img class="Slide_Show_Images" src="./Images/C_Sharp_and_Dot_NET.png" style="width:75% ">
 						<div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
 					</div>
 
 					<div class="mySlides fade">
 						<div class="Slide_Number">4 / 5</div>
-						<img class="Slide_Show_Images" src="/Images/SQL_and_Database.jpg" style="width:75%">
+						<img class="Slide_Show_Images" src="./Images/SQL_and_Database.jpg" style="width:75%">
 						<div class="text">back end development, databases and SQL.</div>
 					</div>
 
 					<div class="mySlides fade">
 						<div class="Slide_Number">5 / 5</div>
-						<img class="Slide_Show_Images" src="/Images/Coding_1.jpg" style="width:75%">
+						<img class="Slide_Show_Images" src="./Images/Coding_1.jpg" style="width:75%">
 						<div class="text">
 							<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
 						</div>
@@ -187,91 +191,152 @@
 		</script>
 
 		<!-- About section -->
+
 		<div class="Row" id="About">
-			<div class="Column_2">
-				<!-- Left column -->
-			<div id="AboutFaucetAlbert">
-				<img id="FaucetHead" src="/Images/LightbulbFaucetHead.png" alt="LightBulbFaucetHeat">
-				<p id="albert_Einstein"><q>Logic will get you from A to B.<br>
-						Imagination will take you everywhere.</q>
-					- Albert Einstein</p>
+			<div class="Column_2" id="AboutMe">
+				<h2 id="Me">About Me:</h2>
+
+				<strong>
+					<h6>Disclaimer: The following views are neither fact nor fiction.
+						They do not necessarily reflect YOUR views; and therefore,
+						CreatingTheCode.com can Not be held responsible for the subsequent
+						effect (ill or otherwise) that these, "said views", may have on your
+						mood, appetite, posture, swollen feet, taste in music, golf swing,
+						or any other aspect of your "fantastic" life... Furthermore; it has
+						been reported that just reading this disclaimer has greatly increased
+						the odds that you will become the perpetrator of a most egregious violation against the societal
+						secret
+						code #125967, Section A, Article B-52. (Yes,...that's right! I am
+						referring to the obvious... a FASHION FAUX PAS !!!) Needless
+						to say, the odds of committing such an unfortunate violation against
+						society at large has already increased by ten-fold. Fifteen minutes ago,
+						you had a fighting chance - but now,... You are DOOMED! --
+						The damage is already done. With that said, you might as well continue reading! Carry on...</h6>
+					<h3>Philosophy & Mission:</h3>
+					<h4>&nbsp The gist...</h4>
+					<p>Critical thinking is a skill, an art
+						form, and the foundation of great code.
+						Code can resemble a polished diamond, a rare and brilliant masterpiece, the simplest of doodles,
+						or
+						anything in between.That's the beauty of it!<br><br> Code is a
+						creation brought to life by the artist...the computer programmer. <br><br>The discovery, the
+						journey,
+						the
+						trials and tribulations, obstacles overcome,
+						and the never-ending hunt for buried treasure keep
+						things exciting... <br><br>
+						I have always enjoyed fixing things that are broken, finding solutions to problems, helping
+						others, and
+						making people smile. My goal is to continue to accomplish these things through my work, and
+						ultimately, through the code I create.<br><br>
+						<strong> My name is LaurieSue Peterson.</strong><br><br>
+
+						<h3>Qualifications & Experience:</h3>
+						<p>As a graduate of <span><a id="Tech" href="https://www.learncodinganywhere.com/"
+									target="_blank">The
+									Tech
+									Academy</a></span>’s Software Developer Boot Camp, I am trained and experienced in
+							the following
+							web and
+							programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack
+							developer and I would love to work with you on a project.
+							<br><br>
 			</div>
-		</div>
+
 			<div class="Column_1">
-				<!-- Right column -->
-				<div id="AboutMe">
-				<h4> Here's the gist...</h4>
-				<p>Critical thinking is a skill, an art
-				form, and the foundation of great code.
-				Code can resemble a polished diamond, a rare and brilliant masterpiece, the simplest of doodles, or
-				anything in between.That's the beauty of it!<br><br> Code is a
-				creation brought to life by the artist...the computer programmer. <br><br>The discovery, the journey,
-				the
-				trials and tribulations, obstacles overcome,
-				and the never-ending hunt for buried treasure keep
-				things exciting... <br><br>
-				I have always enjoyed fixing things that are broken, finding solutions to problems, helping others, and
-				making people smile. My goal is to accomplish these things through code.<br><br>
-				<strong> My name is LaurieSue Peterson.</strong><br><br>
-				As a graduate of <span><a id="Tech" href="https://www.learncodinganywhere.com/" target="_blank">The
-                    Tech
-                    Academy</a></span>’s Software Developer Boot Camp, I am trained and experienced in the following
-                web and
-                programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack
-                developer and I would love to work with you on a project.
-                <br><br>
-                <a id="ContactMe" href="#Contact">Contact</a> me by using the form below!It's as easy as that!</p>
-        </div>
+				<!-- right column -->
+				<div id="AboutFaucetAlbert">
+					<img id="FaucetHead" src="./Images/LightbulbFaucetHead.png" alt="LightBulbFaucetHeat">
+					<p id="albert_Einstein"><q>Logic will get you from A to B.<br>
+							Imagination will take you everywhere.</q>
+						<br>- Albert Einstein</p>
+				</div>
+				<div class="video-container2">
+					<video id="Idea" autoplay loop mute>
+						<source src="./Video/Idea - 122.mp4">Video unable to play on this browser
+					</video>
+				</div>
+				<div class="video-text2">
+					<h2 id="LetsTalk">Let's Talk!</h2>
+					<h4 id="ClickMe">Click the <a id="ContactMe" href="#contactButt" onclick="buttonPink()">Contact</a>
+						button <br>in the lower right corner...<br>
+						It's as easy as that!</h4>
+				</div>
 			</div>
 		</div>
 
-		<!-- GitHub section -->
-		<div class="Row" id="GitHub">
-			<div class="Column_1">
-				<div>
-					<center>
-						<strong>	
-						<h3>Visit My GitHub Profile...</h3>
-							<p><a id="GitHubPic" href="https://github.com/pink-bee-me" 			target="_blank"><img  src="/Images/media/	Images_for_Portfolio/	GitHub.png" width="40%" alt="GitHub Logo"></a></p>
-
-						<p id="GitHubLink" >	<a href="https://github.com/pink-bee-me"target="_blank">github.com/pink-bee-me</a><p>
-						</strong>
+		<!-- Quotes-->
+			<div class="Row">
+				<div class="Column_1">
+					<div class="video-container3">
+						<video autoplay loop mute id="SparklerClip">
+							<source src="./Video/Sparkler - 7817.mp4" type="video/mp4">Sparkler Video Clip</video>
+					</div>
+					<div class="video-text3">
+						<center>
+							<p id="Coco">
+								<q>In order to be irreplaceable,<br>
+									... one must always be different
+								</q>
+								<br>– Coco Chanel.
+							</p>
 						</center>
-				</div>
-				<br>
-				<br>
-				<div>
-				<center>
-					<strong>
-				<h3>Find Me on LinkedIn...</h3>
-					<p id="LinkedInPic" ><a href="www.linkedin.com/in/lauriesue" target="blank"><img  src="/Images/LI-Logo.png" width="70%" alt="LinkedInLink"></a></p>
+					</div>
+					<!-- Video -->
+					<div class="video-container4">
+						<video id="SparklerLeftClip" autoplay loop mute>
+							<source src="./Video/sparkler_Left.mp4" type="video/mp4">Sparkler-Left Video Clip</video>
+					</div>
 
-					<p id="LinkedInLink"><a href="www.linkedin.com/in/lauriesue" target="blank">linkedin.com/in/lauriesue</a>
-					</p>
-					<strong>
-				</center>
-			</div>
-		</div>
-			<div class="Column_2">
-				<!-- Right column -->
-				<div class="video-container">
-				<video autoplay loop  id="SparklerClip">
-					<source src="/Video/Sparkler - 7817.mp4"  type="video/mp4">Sparkler Video Clip</video> 
+					<div class="video-text4">
+						<center>
+							<p id="LetItShine"><q>This little light of mine -<br>
+									I'm gonna let it shine,<br> let it shine, let it shine...</q>
+								<br><span style="font-size:.60em;">-My Sunday School Teacher
+									<br>3rd Grade</span>
+							</p>
+
+						</center>
+					</div>
 				</div>
-			<div class="video-text">
-				<center>
-				<p id="Coco"><q>In order to be irreplaceable, one must always be different</q> <br>– Coco Chanel.</p>
-				<p id="LetItShine"><q>This little light of mine -<br>
-					I'm gonna let it shine, let it shine, let it shine...</q> <br>-My Sunday School Teacher</p>
-			</div>
-		</div>
+
+				<div class="Column_2">
+					<!-- Right column -->
+					<div id="Social_1">
+						<h2>Visit My GitHub Profile</h2>
+						<center>
+						<p id="GitHubPic"><a href="https://github.com/pink-bee-me" target="_blank">
+								<img src="./Images/media/Images_for_Portfolio/GitHub.png" width="40%"
+									alt="GitHub Logo"></a>
+						</p>
+						<p id="GitHubLink"><a href="https://github.com/pink-bee-me"
+								target="_blank">github.com/pink-bee-me</a>
+						</p>
+					</center>
+					</div>
+
+
+		<div id="Social_2">
+	
+		<h2 id="LinkedIn">Find Me on LinkedIn</h2>
+		<center>
+		<p id="LinkedInPic"><a href="www.linkedin.com/in/lauriesue" target="blank">
+				<img src="./Images/LI-Logo.png" width="70%" alt="LinkedInLink"></a>
+		</p>
+
+		<p id="LinkedInLink"><a href="www.linkedin.com/in/lauriesue" target="blank">
+				linkedin.com/in/lauriesue</a>
+		</p>
+	</center>
 	</div>
-
-
-
+		
+	</div>
+	</div>
+</div>			
+	
 	<!-- Contact section -->
 	<div id="Contact">
-		<button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+		<button id="contactButt" onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
 		<div class="form-popup" id="myForm">
 			<form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
 				<!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
@@ -290,16 +355,29 @@
 			</form>
 		</div>
 	</div>
-</div>
+
+
+	<div class="Row" id="Goodbye">
+
+		<h3 id="ThankYou"><span style="color:rgb(97, 124, 179);font-size:2em;">Thank You </span> for your time. </h3>
+		<br>
+		<h3 id="Until">until we meet again...</h3><br><br>
+		<h2 id="GreatDay">GOODBYE <span style="color:peachpuff; text-shadow:none;">and</span> Have A Great Day !!!</h2>
+		<br>
+		<h3 id="From">Sincerely,</h3>
+		<h1 id="GoodbyeCTC">C<span>reating</span>T<span>he</span>C<span>ode</span>.<span>com</span></h1>
+	</div>
+
 	<!-- Footer section -->
 	<footer>
-		<p>
-			<center>
-				<q id="OscarWilde">Be yourself; everyone else is already taken.</q><br>
+
+		<center>
+			<p id="OscarWilde">
+				<q>Be yourself; everyone else is already taken.</q><br>
 				-Oscar Wilde</p>
-				<img id="PinkBee"src="/Images/pinkbeemee.jpg" width="10%"alt="LaurieSueBee"><br>
-				CreatingTheCode.com
-			</center><br>
+			<img id="PinkBee" src="./Images/pinkbeemee.jpg" width="10%" alt="LaurieSueBee"><br>
+			Copyright 2020 &#169 CreatingTheCode.com
+		</center><br>
 		</p>
 	</footer>
 
