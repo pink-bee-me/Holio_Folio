@@ -26,7 +26,7 @@ html {
       background-color: black; /* This colors the navbar black */
       position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
       top: 0; /* This ensures no space is displayed above the navbar */
-      width: 100%; /* This makes the navbar span the entire width of the page */
+      width: 100vw; /* This makes the navbar span the entire width of the page */
       z-index: 1; /*This ensures other elements don't display over the navbar */
       position: fixed;
       -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
@@ -117,7 +117,7 @@ html {
     bottom:25h;
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
     color: white; 
-    width: 100%;
+    width: 100vw;
     height:100vh;
     padding-top: .1vh; /* This adds padding around the text so that the background goes slightly beyond the text */
     -webkit-animation: moveNav 4s; /* Safari 4.0 - 8.0 */
@@ -129,8 +129,7 @@ html {
     top:2vh;
     text-align:center;
     cursor:pointer;
-    transform: tranlateY(25px) translateZ(100px) perspective(400px);
-    transition:transform 3s; 
+    transform:scale (2em);
     transition-delay:2s;
   }
 
@@ -140,8 +139,6 @@ html {
     color: rgb(252, 195, 195);
     font-family:"Yellowtail", cursive;
     margin-bottom:0;
-    transform: tranlateY(25px) translateZ(100px) perspective(400px);
-    transition:transform 3s;
     transition-delay:2s;
   }
   
@@ -153,17 +150,14 @@ html {
     
   }
 
-
-  #Intro_Head > h1#Intro_Title {
+ h1#Intro_Title {
     position:relative;
     top:-2vh;
     font-family:"Optima";
     font-size:4em;
     color:rgb(97, 124, 179);
-    text-shadow:3px 3px 3px rgb(220, 96, 231);
-    transform: tranlateY(25px) translateZ(100px) perspective(400px);
-    transition:transform 3s; 
-    transition-delay:2s;
+    text-shadow:3px 3px 3px rgb(220, 96, 231); 
+   
   }
 
   #Intro_Head > h1#Intro_Title span {
@@ -557,11 +551,7 @@ p#GitHubLink {
     color:rgb(220, 96, 231);
     text-shadow:1.5px 1.5px 1.5px #4d4d4d; 
   }
-  .video-container {
-    position:relative;
-    width:100%;
-    height:100%;
-  }
+ 
 
   .video-container3 {
     position:relative;
@@ -579,6 +569,7 @@ p#GitHubLink {
   height:100%;
   z-index:0;
   border: 15pt solid rgb(247, 224, 205);
+  background-color: rgb(82, 90, 124);
  }
 
  .video-text3 {
@@ -603,6 +594,7 @@ p#GitHubLink {
   margin:0 auto;
   padding:3%;
   top:-143vh;
+  
 }
 
 #SparklerLeftClip {
@@ -612,6 +604,8 @@ p#GitHubLink {
   height:auto;
   z-index:0;
   border: 15pt solid rgb(247, 224, 205);
+  padding:1%;
+  background-color:steelblue;
 }
  .video-text4 {
   position:relative;
